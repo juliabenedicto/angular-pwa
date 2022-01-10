@@ -15,7 +15,7 @@ export class ImagesService {
   }
 
   getImageById(id: String): Observable<Image> {
-    return this.http.get<Image>('https://picsum.photos/id' + id + '/info');
+    return this.http.get<Image>('https://picsum.photos/id/' + id + '/info');
   }
 }
 

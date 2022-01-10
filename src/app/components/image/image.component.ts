@@ -25,12 +25,13 @@ export class ImageComponent implements OnInit {
     const identifier = this.activatedRoute.snapshot.paramMap.get('id');
     console.log('Identifier -->', identifier);
 
-    if (identifier != null){
+    if (identifier){
     this.imagesService.getImageById(identifier).subscribe((image) => {
       if(!image){
-        return this.router.navigateByUrl('/');
+        this.router.navigateByUrl('/');
       }
       this.image = image || null;
       console.log('Image -->', this.image);
-    })}
+    });
+  }
 }};
