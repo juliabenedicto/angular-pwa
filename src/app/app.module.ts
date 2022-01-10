@@ -7,6 +7,7 @@ import { ImagesComponent } from './components/images/images.component';
 import { ImageComponent } from './components/image/image.component';
 
 import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
@@ -28,6 +29,7 @@ import { environment } from '../environments/environment';
     HttpClientModule,
     BrowserAnimationsModule,
     MatCardModule,
+    MatTabsModule,
     MatProgressSpinnerModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

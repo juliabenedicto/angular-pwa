@@ -12,10 +12,11 @@
         </div>
     </div>
 
-    <div>
-        <p><strong>Author:</strong> {{image.author}}</p>
-        <p><strong>Size:</strong> {{image.width}} - {{image.height}}</p>
-        <p><strong>Url:</strong> {{image.url}}</p>
+    <mat-tab-group>
+        <mat-tab label="Author">{{image.author}}</mat-tab>>
+        <mat-tab label="Size">{{image.width}} - {{image.height}}</mat-tab>>
+        <mat-tab label="Url">{{image.url}}</mat-tab>>
 
-    </div>
+
+    </mat-tab-group>
 </div>
