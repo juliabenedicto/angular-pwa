@@ -24,11 +24,13 @@ export class ImageComponent implements OnInit {
     ngOnInit(): void {
     const identifier = this.activatedRoute.snapshot.paramMap.get('id');
     console.log('Identifier -->', identifier);
+
+    if (identifier != null){
     this.imagesService.getImageById(identifier).subscribe((image) => {
       if(!image){
         return this.router.navigateByUrl('/');
       }
       this.image = image || null;
       console.log('Image -->', this.image);
-    })
+    })}
 }};
